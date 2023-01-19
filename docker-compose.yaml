@@ -1,0 +1,12 @@
+version: '3'
+services:
+  pgdb:
+    image: "postgres:11"
+    container_name: "pgdb"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+    ports:
+      - "54320:5432"
+    volumes:
+      - /Users/alex/rebrain/db/data:/var/lib/postgresql/data
